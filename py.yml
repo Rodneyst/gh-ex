@@ -1,14 +1,13 @@
-name: learn-github-actions
+name: Setup Go environment
 on:
-  push:
+  pull:
     branches: [main]
 jobs:
   go-version-lab:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-go@v4.1.0
-        with:
-          node-version: '16.x'
-      - run: npm run install bats
-      - run: run bats -v
+    - uses: actions/checkout@v3
+    - uses: actions/setup-go@v4
+      with:
+        go-version: '>=1.17.0'
+    - run: go version
