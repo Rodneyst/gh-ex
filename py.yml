@@ -1,7 +1,7 @@
 name: Setup Go environment
 on:
   pull:
-    branches: [main]
+    branches: [py]
 jobs:
   go-version-lab:
     runs-on: ubuntu-latest
