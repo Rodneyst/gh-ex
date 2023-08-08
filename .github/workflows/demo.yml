@@ -1,7 +1,7 @@
 name: learn-github-actions
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: npm run install bats
+      - run: npm install bats
       - run: bats -v
