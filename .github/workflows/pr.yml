@@ -1,5 +1,7 @@
 name: install-go-env
-on: pull_request
+on: 
+  pull_request: 
+    branches: [main]
 jobs:
   check-go-version:
     runs-on: ubuntu-latest
